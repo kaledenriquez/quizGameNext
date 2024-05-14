@@ -12,9 +12,12 @@ export default function Navbar() {
     setIsMinimized(!isMinimized);
   };
 
+  const containerStyle = isMinimized ? styles.minimizedContainer : styles.container;
+
+
   return (
 
-    <div className={styles.container}>
+    <div className={containerStyle}>
       <div className={styles.titleHeader}>
         <AiOutlineAliwangwang className={styles.bigIcon} />
         {!isMinimized && <h1 className={styles.bigText}>Quiz Game</h1>}
@@ -27,12 +30,16 @@ export default function Navbar() {
         </div>
         <div className={styles.button}>
           <AiOutlineBarChart className={styles.icon} />          
-          {!isMinimized && <h2 className={styles.smallText}>Charts</h2>}
+          {!isMinimized && <h2 className={styles.smallText}>Estadísticas</h2>}
         </div>
+      </div>
+
+      <div className={styles.buttonContainer}>
         <div className={styles.button}>
           <AiOutlineSetting className={styles.icon} />          
           {!isMinimized && <h2 className={styles.smallText}>Configuración</h2>}
         </div>
+
         <div className={styles.button}>
           <AiOutlineLogout className={styles.icon} />          
           {!isMinimized && <h2 className={styles.smallText}>Salir</h2>}

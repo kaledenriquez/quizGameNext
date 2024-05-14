@@ -2,21 +2,34 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: var(--navbar-size);
+  width: var(--navbar-size);
   height: 100vh;
   background-color: var(--primary-color);
+  transition: width 0.2s ease-out;
   -webkit-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
   
 }
 
-
+.minimizedContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 100vh;
+  background-color: var(--primary-color);
+  transition: width 0.2s ease-in-out;
+  -webkit-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.75);
+}
 
 .titleHeader{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 6rem;
   border-bottom: 3px solid var(--quaternary-color); 
 }
 
@@ -56,6 +69,7 @@
   align-items: center;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  height: 1.4rem;
   font-size: 1.4rem;
   width: 100%;
   cursor: pointer;
