@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from '@/styles/navbar.module.css';
 import { AiOutlineAliwangwang, AiOutlineHome, AiOutlineBarChart, AiOutlineSetting, AiOutlineLogout, AiFillCaretRight } from "react-icons/ai";
+import Link from 'next/link'
 
 export default function Navbar() {
 
@@ -18,20 +19,20 @@ export default function Navbar() {
   return (
 
     <div className={containerStyle}>
-      <div className={styles.titleHeader}>
+      <Link href="/" className={styles.titleHeader}>
         <AiOutlineAliwangwang className={styles.bigIcon} />
         {!isMinimized && <h1 className={styles.bigText}>Quiz Game</h1>}
-      </div>
+      </Link>
 
       <div className={styles.buttonContainer} >
-        <div className={styles.button}>
+        <Link href="/" className={styles.button}>
           <AiOutlineHome className={styles.icon} />          
           {!isMinimized && <h2 className={styles.smallText}>Home</h2>}
-        </div>
-        <div className={styles.button}>
+        </Link>
+        <Link href="/estadisticas" className={styles.button}>
           <AiOutlineBarChart className={styles.icon} />          
           {!isMinimized && <h2 className={styles.smallText}>Estadísticas</h2>}
-        </div>
+        </Link>
       </div>
 
       <div className={styles.buttonContainer}>
