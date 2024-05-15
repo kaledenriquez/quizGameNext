@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Rubik } from "next/font/google";
+import Navbar from "@/app/components/navbar";
+import styles from "@/styles/layout.module.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={rubik.className}>
+        <Navbar/>
+        <div className={styles.pageContainer}>
+          {children}
+        </div>
+        
+      </body>
     </html>
   );
 }
