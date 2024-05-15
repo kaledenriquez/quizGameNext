@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
 
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(true);
 
   const handleMinimizeClick = () => {
     setIsMinimized(!isMinimized);
